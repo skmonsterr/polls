@@ -1,0 +1,33 @@
+# CREATE POLL
+POST http://localhost:3333/polls
+Content-Type: application/json
+
+{
+  "title": "Escolha um numero de 0 a 5:",
+  "options": ["0", "1", "2", "3", "4", "5"]
+}
+
+
+###
+
+# GET POLL BY ID
+//7c3f304d-187b-4a94-923a-7f2c6e950dac
+//f942f6fb-e669-416f-b00e-5435a3aeb5ea
+GET http://localhost:3333/polls/b3a489ac-9585-467a-b5e8-a9ce98c0a2fc
+Content-Type: application/json
+
+
+
+###
+
+
+# VOTE ON POLL
+//7c3f304d-187b-4a94-923a-7f2c6e950dac
+//f942f6fb-e669-416f-b00e-5435a3aeb5ea
+POST http://localhost:3333/polls/b3a489ac-9585-467a-b5e8-a9ce98c0a2fc/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "d6adeca3-0dc7-45a4-9410-ca137b596a72"
+  
+}
